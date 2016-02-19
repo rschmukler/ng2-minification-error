@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+  <title><%= webpackConfig.metadata.title %></title>
+  <base href="<%= webpackConfig.metadata.baseUrl %>">
+
+</head>
+
+<body>
+
+  <app>
+    Loading...
+  </app>
+
+  <% if (webpackConfig.metadata.ENV === 'development') { %>
+  <!-- Webpack Dev Server reload -->
+  <script src="http://<%= webpackConfig.metadata.host %>:<%= webpackConfig.metadata.port %>/webpack-dev-server.js"></script>
+  <% } %>
+
+</body>
+</html>
